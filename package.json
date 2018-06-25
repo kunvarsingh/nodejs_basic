@@ -1,0 +1,27 @@
+{
+  "name": "advocate_case_dairy",
+  "version": "1.0.0",
+  "description": "all about digital",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "kunvar singh",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "crypto": "^1.0.1",
+    "dateformat": "^3.0.3",
+    "express": "^4.16.3",
+    "jade": "^1.11.0",
+    "jsonwebtoken": "^8.2.0",
+    "mongoose": "^5.0.11",
+    "mongoose-unique-validator": "^2.0.0",
+    "nodemailer": "^4.6.3",
+    "q": "^1.5.1",
+    "web-push": "^3.3.2"
+  }
+}
