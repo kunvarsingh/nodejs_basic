@@ -12,6 +12,7 @@
   "dependencies": {
     "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
+    "cloudinary": "^1.11.0",
     "cors": "^2.8.4",
     "crypto": "^1.0.1",
     "dateformat": "^3.0.3",

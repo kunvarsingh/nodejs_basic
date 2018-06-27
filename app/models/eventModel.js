@@ -3,12 +3,11 @@ var Schema = mongoose.Schema;
 
 var eventSchema = new Schema({
     EventName: {type: String, required: true},
-    EventDescription: {type: String, require: true},
-    EventPerson: {type: Number},
-    EventImage: {type: String},
-    EventRange: {type: Array}
-    //EventRange: {type: Date, required: true},
-    // Image: {type:,}
+    Description: {type: String, require: true},
+    noOfperson: {type: Number},
+    Image: {type: String},
+    startDate: {type: Date , required: true},
+    endDate: {type: Date, required: true}
 });
 
 module.exports = mongoose.model('event', eventSchema);

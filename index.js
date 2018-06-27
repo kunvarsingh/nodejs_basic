@@ -10,21 +10,20 @@ var cors = require('cors');
 var USER =require('./routes/userRout');
 var EVENT=require('./routes/eventRoute');
 
-app.use(bodyparser.urlencoded({ extended : false }));
-app.use(bodyparser.json());
+app.use(bodyparser.urlencoded({ limit : '20mb', extended : false }));
+app.use(bodyparser.json({ limit : '20mb', extended : false }));
 app.use(cors());
 
 // --------------------------------------MONGODB Connection--------------------------------------
-mongoose.connect('mongodb://localhost:27017/nurtr_assignment', function(data,err){
+mongoose.connect('mongodb://localhost:27017/digital_diaryDB', function(data,err){
 	if(!err) console.log("Error to connect MONGODB :",err);
-	console.log("MONGODB connection successfully:   mongodb://localhost:27017/nurtr_assignment");
+	console.log("MONGODB connection successfully:   mongodb://localhost:27017/digital_diaryDB");
 });
 // --------------------------------------END MONGODB Connection--------------------------------------
 
 
 // --------------------------------------ROUTING for user module--------------------------------------
 app.use('/user',USER);
-
 app.use('/event', EVENT);
 
 app.get('/',function(req,res){
