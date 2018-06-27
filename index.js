@@ -8,6 +8,7 @@ var cors = require('cors');
 
 // import routing files----------------------
 var USER =require('./routes/userRout');
+var EVENT=require('./routes/eventRoute');
 
 app.use(bodyparser.urlencoded({ extended : false }));
 app.use(bodyparser.json());
@@ -24,13 +25,14 @@ mongoose.connect('mongodb://localhost:27017/nurtr_assignment', function(data,err
 // --------------------------------------ROUTING for user module--------------------------------------
 app.use('/user',USER);
 
+app.use('/event', EVENT);
 
 app.get('/',function(req,res){
   res.send({message :"Welcome Nurtre"});
 });
 
 app.listen(process.env.PORT || 9000,function(req,res){
-  console.log("***********Server is started on: http://localhost:9000/*********************");
+  console.log("Server is started on: http://localhost:9000/");
 })
 
 module.exports = app;
